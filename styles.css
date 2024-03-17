@@ -1,0 +1,292 @@
+*,*::before,*::after
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color:var(--colorLight2);
+    font-family:'Merriweather',sans-serif;
+    
+    overflow-x: hidden;
+}
+
+:root
+{
+    --colorDark1: #112D4E;
+    --colorDark2: #3f72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+
+}
+.wrapper
+{
+    width:100vw;
+    height:100vh;
+    background-image: linear-gradient(168deg,#112d4e 0%,#3f72ef 100%);
+
+}
+h1
+{
+    text-align:center;
+    text-transform: uppercase;
+    padding-top:20px;
+    
+
+}
+.tab-container
+{
+    display:flex;
+    width:90%;
+    margin:0 auto;
+    margin-top:4rem;
+    justify-content:space-evenly;
+    
+}
+.tab
+{
+    cursor:pointer;
+    font-size: 0.875rem;
+    letter-spacing: 1.75px;
+    padding:5px 8px;
+   
+}
+.tab.current-tab
+{
+ background-color: rgba(219,226,239,0.5);
+ border-radius: 4px;
+}
+.weather-container
+{
+    margin-block:4rem;
+}
+.btn
+{
+    all:unset;
+    font-size:0.85rem;
+    text-transform:uppercase;
+    border-radius:5px;
+    background-color: var(--colorDark2);
+    cursor:pointer;
+    padding:10px 30px;
+    margin-bottom:10px;
+    margin-top:10px;
+
+
+}
+.sub-container
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.grant-location-container
+{
+   display:none;
+
+}
+.grant-location-container.active
+{
+    display:flex;
+}
+.grant-location-container img
+{
+    margin-bottom:2rem;
+}
+#p1
+{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+#p2
+{
+    font-size:0.85rem;
+    font-weight:500;
+    margin-top:0.75rem;
+    margin-bottom:1.75rem;
+    letter-spacing:0.75px;
+
+}
+.loading-container
+{
+   display:none;
+
+}
+.loading-container.active
+{
+    display:flex;
+}
+.loading-container p
+{
+    text-transform: uppercase;
+    
+}
+.user-info-container
+{
+    display:none;
+}
+.user-info-container.active
+{
+    display:flex;
+}
+.name
+{
+    display:flex;
+    align-items:center;
+    gap:0 0.5rem;
+    margin-bottom:1rem;
+
+}
+.user-info-container p
+{
+    font-size:1.5rem;
+    font-weight:200;
+}
+.user-info-container img
+{
+    width:90px;
+    height:90px;
+}
+.name p
+{
+    font-size:2rem;
+}
+.name img
+{
+    width:30px;
+    height:30px;
+    object-fit: contain;
+}
+.user-info-container p[data-temp]
+{
+    font-size:2.75rem;
+    font-weight:700;
+}
+.parameter-container
+{
+ display:flex;
+ gap:10px 20px;
+ justify-content:center;
+ margin-top:2rem;
+
+}
+.parameter
+{
+    width:40%;
+
+    max-width:200px;
+    background-color:rgba(219,226,239,0.5);
+    border-radius: 5px;
+    padding:1rem;
+    display:flex;
+    flex-direction:column;
+    gap:5px 0;
+    
+
+}
+.parameter img
+{
+    width:80px;
+    
+    margin-left:auto;
+    margin-right:auto;
+    object-fit: contain;
+   
+}
+.parameter p:first-of-type
+{
+    font-size: 1.15rem;
+    font-weight:600;
+    text-transform:uppercase;
+   padding-left: 2rem;
+   padding-right:2rem;
+   
+    
+}
+.parameter p:last-of-type
+{
+    font-size:1rem;
+    font-weight:200;
+    padding-left: 2rem;
+    padding-right:2rem;
+    text-align: center;
+     
+}
+.form-container
+{
+    display:none;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content:center;
+    align-items:center;
+    gap: 0 10px;
+    margin-bottom:3rem;
+    
+}
+.form-container.active
+{
+    display:flex;
+}
+
+.form-container input
+{
+ all:unset;
+ max-width:550px;
+ width:calc(100% - 80px);
+ height:40px;
+ padding:1px;
+ padding-left:1rem;
+ background-color: rgba(219,226,239,0.5);
+ border-radius: 10px;
+
+}
+.form-container input::placeholder
+{
+  color:rgb(255, 255, 255,0.7);
+  padding-left:0.1rem;
+  
+}
+.form-container input:focus
+{
+  outline:3px solid rgba(255, 255, 255,0.7);
+  
+
+}
+.form-container .btn
+{
+ width:40px;
+ height:40px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ border-radius:100%;
+
+ padding:0;
+}
+.api-err-container
+{
+    display:none;
+}
+.api-err-container.active
+{
+    display:flex;
+}
+@media screen and (max-width: 500px)
+{
+
+
+
+.parameter {
+    width: 100%;
+    margin-bottom:1rem;
+   
+
+}
+.parameter-container{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    justify-content: center;
+    align-items:center;
+}
+}
